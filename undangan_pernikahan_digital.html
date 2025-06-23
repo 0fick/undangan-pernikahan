@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/5/59/Wayang_Kulit_Puppet.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      animation: fadeInBody 2s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border: 1px solid #eee;
+      text-align: center;
+      animation: fadeInCard 1.5s ease;
+    }
+
+    @keyframes fadeInCard {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #222;
+    }
+
+    .names {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+
+    .details {
+      font-size: 1.1rem;
+      margin: 2rem 0;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-style: italic;
+      color: #777;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      color: #000;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ddd;
+    }
+
+    .slideshow {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 2rem;
+      margin-top: 2rem;
+      scroll-behavior: smooth;
+    }
+
+    .slide {
+      scroll-snap-align: center;
+      flex: 0 0 100%;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      animation: fadeInCard 1s ease;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung pemutar audio.
+  </audio>
+
+  <div class="overlay">
+    <div class="container">
+      <div class="slideshow">
+        <div class="slide">
+          <div class="card">
+            <h1>Undangan Pernikahan</h1>
+            <div class="names">Taufik & Ayu</div>
+            <div class="details">
+              Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami:<br><br>
+              <strong>Hari/Tanggal:</strong> Sabtu, 10 Agustus 2025<br>
+              <strong>Waktu:</strong> 10.00 WIB - selesai<br>
+              <strong>Tempat:</strong> Gedung Graha Citra, Bandung<br><br>
+              Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+            </div>
+            <a href="https://www.google.com/maps/place/Gedung+Graha+Citra,+Bandung" target="_blank" class="button">Lihat Lokasi di Google Maps</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="card">
+            <h1>Acara Resepsi</h1>
+            <div class="details">
+              <strong>Hari/Tanggal:</strong> Sabtu, 10 Agustus 2025<br>
+              <strong>Waktu:</strong> 13.00 WIB - selesai<br>
+              <strong>Tempat:</strong> Gedung Graha Citra, Bandung
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="card">
+            <h1>Doa & Harapan</h1>
+            <div class="details">
+              Kami sangat berbahagia atas pernikahan ini dan memohon doa restu dari Bapak/Ibu/Saudara/i agar rumah tangga kami menjadi keluarga sakinah, mawaddah, warahmah.
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="card">
+            <h1>Kutipan Islami</h1>
+            <div class="footer">
+              "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri..." <br>(QS. Ar-Rum: 21)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
